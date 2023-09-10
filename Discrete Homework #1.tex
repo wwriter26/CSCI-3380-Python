@@ -1,0 +1,446 @@
+
+Page
+1
+of 6
+\documentclass[9pt]{article}
+\def\solutions{1} %Change this '0' to a '1' in order for your solutions to appear
+if you choose to TeX your homework
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx} % needed for including graphics e.g. EPS, PS \
+usepackage{tikz}
+\usepackage{tikz}
+\usepackage{tikzsymbols}
+\usepackage{relsize}
+\usetikzlibrary{patterns,decorations.pathreplacing,shapes,arrows}
+\usepackage{algorithm2e}
+\topmargin -2.5cm % read Lamport p.163
+\oddsidemargin -0.04cm % read Lamport p.163
+\evensidemargin -0.04cm % same as oddsidemargin but for left-hand pages
+\textwidth 16.59cm
+\textheight 25.94cm
+% \pagestyle{empty} % Uncomment if don't want page numbers
+\pagenumbering{gobble}
+\parskip 7.2pt % sets spacing between paragraphs
+%\renewcommand{\baselinestretch}{1.5} % Uncomment for 1.5 spacing between lines
+\parindent 0pt % sets leading space for paragraphs
+% No date in header
+\date{}
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=true,
+linkcolor=blue,
+filecolor=magenta,
+urlcolor=cyan,
+}
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+\newcommand{\ls}{\left\{}
+\newcommand{\rs}{\right\}}
+\newcommand{\lbar}{\left|}
+\newcommand{\rbar}{\right|}
+\newcommand{\ld}{\left.}
+\newcommand{\rd}{\right.}
+\newcommand{\myexists}{\exists \hspace{.3mm}}
+\newcommand{\hs}{\hspace{.75mm}}
+\newcommand{\bs}{\hspace{-.75mm}}
+\newcommand{\nin}{\noindent}
+\newcommand{\fx}{f\bs\left( x \right)}
+\newcommand{\gx}{g\bs\left( x \right)}
+\newcommand{\qx}{q\bs\left( x \right)}
+\newcommand{\nn}{\nonumber}
+\newcommand{\vfive}{\vspace{5mm}}
+\newcommand{\vthree}{\vspace{3mm}}
+\newcommand{\fof}[1]{f\lp #1\rp}
+\newcommand{\gof}[1]{g\lp #1\rp}
+\newcommand{\qof}[1]{q\lp #1\rp}
+\newcommand{\myp}[1]{\left( #1 \right)}
+\newcommand{\myb}[1]{\left[ #1 \right]}
+\newcommand{\mys}[1]{\left\{ #1 \right\}}
+\newcommand{\myab}[1]{\left| #1 \right|}
+\newcommand{\myj}{_j}
+\newcommand{\myjp}{_{j+1}}
+\newcommand{\myjm}{_{j-1}}
+\newcommand{\f}[1]{f\hspace{-1mm}\left( #1 \right)}
+\newcommand{\fp}[1]{f'\hspace{-1mm}\left( #1 \right)}
+\newcommand{\g}[1]{g\hspace{-1mm}\left( #1 \right)}
+\newcommand{\gp}[1]{g'\hspace{-1mm}\left( #1 \right)}
+\newcommand{\q}[1]{q\hspace{-1mm}\left( #1 \right)}
+\newcommand{\qp}[1]{q'\hspace{-1mm}\left( #1 \right)}
+\newcommand{\Px}[1]{P\hspace{-1mm}\left( x_{#1} \right)}
+\newcommand{\Qx}[1]{Q\hspace{-1mm}\left( x_{#1} \right)}
+\newcommand{\tten}[1]{\times 10^{#1}}
+\newcommand{\aij}[1]{a_{#1}}
+\newcommand{\bij}[1]{b_{#1}}
+\newcommand{\rij}[1]{r_{#1}}
+\newcommand{\R}[1]{\mathbb{R}^{#1}}
+\newcommand{\ith}{i^{\textrm{th}}}
+\newcommand{\jth}{i^{\textrm{th}}}
+\newcommand{\kth}{i^{\textrm{th}}}
+\newcommand{\inv}[1]{{#1}^{-1}}
+\newcommand{\bx}{\mathbf{x}}
+\newcommand{\bv}{\mathbf{v}}
+\newcommand{\bw}{\mathbf{w}}
+\newcommand{\by}{\mathbf{y}}
+\newcommand{\bb}{\mathbf{b}}
+\newcommand{\be}{\mathbf{e}}
+\newcommand{\br}{\mathbf{r}}
+\newcommand{\xhat}{\hat{\mathbf{x}}}
+\newcommand{\beq}{\begin{eqnarray}}
+\newcommand{\eeq}{\end{eqnarray}}
+\newcommand{\ben}{\begin{enumerate}}
+\newcommand{\een}{\end{enumerate}}
+\newcommand{\bsq}{\mathsmaller{\blacksquare}}
+\newcommand{\iter}[1]{^{\myp{#1}}}
+% matrix macro
+\newcommand{\mymat}[1]{
+\left[
+\begin{array}{rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr}
+#1
+\end{array}
+\right]
+}
+\newcommand{\smallaug}[1]{
+\left[
+\begin{array}{rr|r}
+#1
+\end{array}
+\right]
+}
+% Actual document starts here
+%
+===================================================================================
+===
+\begin{document}
+\begin{minipage}{0.65\textwidth}
+\nin {\bf CSCI 2824 -- FALL 2023 } \\
+{\bf \underline{Name:} William Writer} 
+previous { } 
+{\bf \underline{Student ID:} 110442555} 
+
+\end{minipage}\hfill
+\begin{minipage}{0.35\textwidth}
+\hfill {\bf Homework 1}%Replace the 'N' with the appropriate homework number} \\
+\end{minipage}
+% Actual text body starts here
+%
+===================================================================================
+===
+\vfive
+\nin This assignment is $\color{red}{\text{due on Friday, September 8 to Gradescope
+by 6PM}}$. You are expected to write or type up your solutions neatly. Remember
+that you are encouraged to discuss problems with your classmates, but you must work
+and write your solutions on your own.
+{\bf Important}: Make sure to clearly write your full name and your student ID
+number at the top of your assignment. You may {\bf neatly} type your solutions in
+LaTeX for extra credit on the assignment. Make sure that your images/scans are
+clear or you will lose points/possibly be given a 0. Additionally, please be sure
+to $\color{blue}{\text{match the problems from the Gradescope outline}}$ to your
+uploaded images; $\color{red}{\text{no match = no points}}$.\\
+\textbf{\color{red}{Answers alone, correct or not, get no points.}} \
+color{black}You must explain/prove/defend your answer on your homework.
+\vspace{5mm}
+\ben
+%==============================================================================
+% problem 1 goes below
+%==============================================================================
+\item (6 points, 1.5 each) The Samsung Galaxy Z-fold 5 has 12 GB RAM, 
+the CPU speed is 3.2 GHz,
+and its camera has 12 MP resolution. 
+The Google Pixel-7 Pro has 12 GB
+RAM, the CPU speed is 2.85 GHz, and it's camera has 50 MP resolution. 
+The Apple
+iPhone 14 Pro has 6 GB RAM, the CPU speed is 3.46 GHz, and the camera has 48 MP
+resolution.\\
+Consider the propositions below, state their truth value, then write the negation
+of each.\\
+\\
+A] The Pixel-7 has more RAM, more CPU speed, and a higher resolution than the Z-
+fold.\\
+ \begin{quote}
+  Proposition A is False because even though both the Pixel-7 and the Z-fold have the same RAM, it is not higher. And even though its resolution is indeed higher than the Z-fold, the CPU speed is slower. Since two of those and statements are false, this would output false. \\
+ Negation: The Pixel-7 doesn't have more RAM, CPU, or a higher resolution than the Z-fold \\
+  \end{quote}
+\\
+B] The iPhone has more CPU speed or a higher resolution camera than the Pixel-7.\\
+ \begin{quote}
+ Proposition B would be True because the iPhone does in fact have a cpu speed than the pixel-7. And even though it has a lower camera resolution, it doesn't matter since it is an or statement.
+ \\
+ Negation: The iPhone doesn't have more CPU speed and doesn't have a lower resolution camera than the Pixel-7 \\
+   \end{quote}
+\\
+C] If the Pixel-7 has more RAM and more CPU speed than the iPhone, then it also has
+a higher resolution camera.\\
+\begin{quote} 
+Proposition C is True because even though the pixel-7 has less cpu than the iPhone, that makes the first condition false, however, since this is an implication, regardless of whether or not the camera has higher resolution, the proposition will be true since the first and statement is false. \\
+Negation: If the pixel-7 doesn't have more RAM or CPU speed than the iPhone, then it won't have a higher resolution camera \\
+  \end{quote}
+\\
+D] The Z-fold has more RAM than the Pixel-7 if and only if the Pixel-7 has more RAM
+than the Z-fold.
+\begin{quote}
+Proposition D is True because if and only if is a bi-conditional statement which means that both parts either have to be true or false to output true. And in this case both are false because the RAM for the two phones are the same, not higher. \\
+Negation: The Z fold either has more Ram than the Pixel-7 and the Pixel-7 doesn't have more RAM than the Z fold or the Z fold doesn't have more RAM than the pixel 7 and the pixel 7 has more RAM than the Z-fold
+\\ 
+  \end{quote}
+\\
+p = The Z-fold has more RAM than the Pixel-7 \\
+q = Pixel-7 has more RAM than the Z-fold
+\\
+p \lor \lnot q \\
+\lnot p \lor q \\
+\\
+
+\vspace{10mm}
+\newpage
+%==============================================================================
+% Problem 2 goes below
+%==============================================================================
+\vspace{5mm}
+\item (4.5 points, 1.5 each) Consider the following conditionals. Write the
+converse, the inverse, and the contrapositive of each one.\\
+\\
+A] If it is hot tomorrow, then I will go swimming tomorrow.\\
+	\begin{quote}
+	Converse: I will go swimming tomorrow if it is hot. \\
+	Inverse: if it is not hot tomorrow, then I will not go swimming.\\
+	Contrapositive: if I do not go swimming tomorrow, it is not hot.\\
+	\end{quote}
+	\\
+	
+	p = it is hot tomorrow \\ q = I will go swimming \\
+	Converse: q \to p\\
+	Inverse: \lnot p \to \lnot q\\
+	Contrapositive: \lnot q \to \lnot p\\
+	
+\\
+B] I go to the CU pool whenever it is a hot day.\\
+\begin{quote}
+	Converse: Whenever it is a hot day, I go to the CU pool.\\
+	Inverse: I do not go to the CU Pool whenever it is not a hot day \\
+	Contrapositive: Whenever it is not a hot day, i don't go to the CU pool.\\
+	\end{quote}
+	\\
+	p = I go to the CU pool \\ q = It is a hot day \\
+	Converse: q \to p\\
+	Inverse: \lnot p \to \lnot q\\
+	Contrapositive: \lnot q \to \lnot p\\
+	
+\\
+C] When I go swimming, it is necessary that I wear flippers.\\
+\begin{quote}
+	Converse: It is necessary that I wear flippers when I go swimming. \\
+	Inverse: When I don't go swimming, it isn't necessary that I wear flippers\\
+	Contrapositive: It is not necessary that I wear flippers when i don't go swimming.\\
+	\end{quote}
+	\\
+	p = I go swimming \\ q = I wear Flippers \\
+	Converse: q \to p\\
+	Inverse: \lnot p \to \lnot q\\
+	Contrapositive: \lnot q \to \lnot p\\
+\\
+\vspace{10mm}
+\newpage
+%==============================================================================
+% Problem 3 goes below
+%==============================================================================
+\vspace{5mm}
+\item (2.5 points) Consider the following system specifications. Rewrite the
+specifications using propositional variables. Determine whether or not the
+specifications are consistent. Explain your reasoning.\\
+\\
+System Specifications:\\
+If the file system is not locked, then new messages will be queued. If the file
+system is not locked, then the system is functioning normally, and conversely. If
+new messages are not queued, then they will be sent to the message buffer. If the
+file system is not locked, then new messages will be sent to the message buffer.
+New messages will not be sent to the message buffer.
+\\ \\
+Variables: \\P = File System is Locked \\ Q = New Messages are queued \\ K = New messages will be sent to the Message Buffer \\ J = The system is functioning normally \\ 
+
+\lnot P \to (Q \land K) \land (\lnot P \iff J) \land (\lnot Q \to K) \land \lnot K
+
+\begin{quote}
+	The specifications are not consistent with the system because it says that the new messages will not be sent to the message buffer even though that opposes the other specifications.
+\end{quote}
+
+\\
+\vspace{10mm}
+\newpage
+%==============================================================================
+% Problem 4 goes below
+%==============================================================================
+\vspace{5mm}
+\item (6 points, 1.5 each) Use truth tables to explain A], B], C], and D]:\\
+\\ \\
+A] $\phantom{xxx}[\lnot p\land(p\lor q)]\to q$ is a tautology.\\
+	\begin{tabular}{| c | c | c | c | c | c |}
+	\hline
+		$p$ & $q$ & $\lnot p$  & $(p\lor q)$  & $\lnot p\land(p\lor q)$ & $[\lnot p\land(p\lor q)]\to q$\\ \hline
+		T & T & F & T & F & T\\ \hline
+		T & F & F & T & F & T\\ \hline
+		F & T & T & T & T & T\\ \hline
+		F & F & T & F & F & T\\ \hline
+	\end{tabular} \\ Since all of the values output to be true, this is a tutology\\
+\\ \\
+B] $\phantom{xxx}(p\to q)\to r$ and $p\to(q\to r)$ are not logically
+equivalent.\\ \\
+\begin{tabular}{| c | c | c | c | c |}
+	\hline
+		$p$ & $q$ & $r$ & $(p \to q)$  & $(p \to q) \to r$ \\ \hline
+		T & T & T & T & T \\ \hline
+		T & F & T & F & T\\ \hline
+		F & T & T & T & T \\ \hline
+		F & F & T & T & T\\ \hline
+		T & T & F & T & F \\ \hline
+		T & F & F & F & T \\ \hline
+		F & T & F & T & F \\ \hline
+		F & F & F & T & F\\ \hline
+	\end{tabular}
+	\\
+	\begin{tabular}{| c | c | c | c | c |}
+	\hline
+		$p$ & $q$ & $r$ & $(q \to r)$ & $ p \to (q \to r)$\\ \hline
+		T & T & T & T &  T\\ \hline
+		T & F & T & T &  T\\ \hline
+		F & T & T & T &  T\\ \hline
+		F & F & T & T &  T\\ \hline
+		T & T & F & F &  F\\ \hline
+		T & F & F & T &  T\\ \hline
+		F & T & F & F & T \\ \hline
+		F & F & F & T &  T\\ \hline
+	\end{tabular} \\ Since not every final value inside of the two charts are the same, this makes the two propositions not logically equivalent\\
+	\\
+\\
+C] $\phantom{xxx}$ The negation of $(p\land q)\to p$ is a contradiction.\\ \\
+\begin{tabular}{| c | c | c | c | c |}
+	\hline
+		$p$ & $q$ & $\lnot p$ & (p \land q)$ & $(p \land q) \land \lnot p$\\ \hline
+		T & T & F & T &  F\\ \hline
+		T & F & F & T &  F\\ \hline
+		F & T & T & F &  F\\ \hline
+		F & F & T  & F & F \\ \hline
+	\end{tabular} \\ First finding the negation of this proposition, we know that it is equivalent to $ \lnot (p \land q) \lor p$. Then Negating it we get $(p \land q)  \land \lnot p$ which both the P's contradict since one will always be true while the other is false.\\ 
+\\ \\
+D] $\phantom{xxx}p\to q$ is a contingency.
+\\ \\
+\begin{tabular}{| c | c | c |}
+	\hline
+		$p$ & $q$ & $(p \to q)$\\ \hline
+		T & T & T\\ \hline
+		T & F & F \\ \hline
+		F & T & T \\ \hline
+		F & F & T \\ \hline
+	\end{tabular} \\ A contingency is only false when the if statement is true and the then statement is false. \\
+\\ \\
+\vspace{10mm}
+\newpage
+%==============================================================================
+% Problem 5 goes below
+%==============================================================================
+\vspace{5mm}
+\item (2 points) Without using a truth table,\\
+explain how the following compound proposition is, or is not, satisfiable:\\
+\\
+$(p\lor q\lor \lnot r)\land(p\lor\lnot q\lor\lnot s)\land(p\lor\lnot r\lor\lnot s)
+\land(\lnot p\lor \lnot q\lor\lnot s)\land(p\lor q\lor\lnot s)$
+\\
+\\
+\begin{quote}
+	Starting off, I saw this as we want to group together the propositions that all have the same variables. That leaves us with three propositions that have p q and s. And since there are $\lnots $and aren't any in-front of the p's and q's, I believe we have to focus on the $\lnot$ s which all of this have. So if s is false, all of these three conditions will be true. This also works with the third proposition which has an $\lnot$ s. As for the first proposition, since there is an $\lnot$ r, if r is also false, that is how we are going to get a satisfiable condition. So yeah it is possible to satisfy. (There are also more possibilities like if p is true  and s is false.)
+\end{quote}
+\\
+\vspace{10mm}
+\newpage
+%==============================================================================
+% Problem 6 goes below
+%==============================================================================
+\vspace{5mm}
+\item (6 points, 1.5 each) Negate the following statements:\\
+\\
+A] Mark is big and strong.\\
+\begin{quote}
+	Mark is neither big or strong
+	
+	\\
+	
+	p = Mark is Big \\ 
+	q = Mark is Strong \\
+	$\lnot p \lor \lnot q $\\ 
+	
+\end{quote}
+
+\\
+B] Elon will lift weights or run tomorrow.\\
+\begin{quote}
+	Elon won't lift weights and won't run tomorrow
+	
+	\\
+	
+	p = Elon will lift weights tomorrow\\ 
+	q = Elon will run tomorrow \\
+	$\lnot p \land \lnot q $\\ 
+	
+\end{quote}
+
+
+\\
+C] Mark walks or swims for exercise.\\
+\begin{quote}
+	Mark won't walk and won't swim for exercise
+	
+	\\
+	
+	p = Mark walks for exercise \\
+	q = Mark swims for exercise\\
+	$\lnot p  \land \lnot q$
+	
+\end{quote}
+\\
+D] Elon knows judo and taekwondo.\\
+\begin{quote}
+	Elon doesn't know judo or taekwondo
+	
+	\\
+	
+	p = Elon knows judo \\ 
+	q = Elon knows taekwondo\\
+	$\lnot p \lor \lnot q $\\ 
+	
+\end{quote}
+\\
+\\
+\vspace{10mm}
+\newpage
+%==============================================================================
+% Problem 7 goes below
+%==============================================================================
+\vspace{5mm}
+\item (3 points) As everyone knows, CU football players either always lie, always
+tell the truth, and some both lie and speak the truth. To be specific, quarterbacks
+always lie and defensive linebackers always tell the truth, and kickers sometimes
+lie and sometimes tell the truth. Suppose you are speaking with three CU football
+players named Alan, Barney, and Clyde and you know one is a defensive linebacker,
+one is a quarterback, and one is a kicker, but you don't know which is which. Alan
+says, "I am a kicker", and Barney says "That is true." Clyde says, "I am not a
+kicker."\\
+What is the position of each player?
+\\ \\
+QuarterBack: Alan\\
+Defensive Linebacker: Clyde\\
+Kicker: Barney\\
+
+\begin{quote}
+	 * Alan can't be the defensive linebacker and is lying(cause him telling the truth doesn't work out) so Alan is the quarterback \\
+	* Barney is following his lie so Barney would have to be the kicker \\
+	* Clyde is the defensive line backer cause he is telling the truth that he isn't the kicker\\
+	
+\end{quote}
+\\
+\vspace{10mm}
+%==================================================================================
+======================================
+\een
+\end{document}

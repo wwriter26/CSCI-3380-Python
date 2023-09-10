@@ -1,0 +1,241 @@
+\documentclass[9pt]{article}
+\def\solutions{1} %Change this '0' to a '1' in order for your solutions to appear
+if you choose to TeX your homework
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx} % needed for including graphics e.g. EPS, PS \
+usepackage{tikz}
+\usepackage{tikz}
+\usepackage{tikzsymbols}
+\usepackage{relsize}
+\usetikzlibrary{patterns,decorations.pathreplacing,shapes,arrows}
+\usepackage{algorithm2e}
+\topmargin -2.5cm % read Lamport p.163
+\oddsidemargin -0.04cm % read Lamport p.163
+\evensidemargin -0.04cm % same as oddsidemargin but for left-hand pages
+\textwidth 16.59cm
+\textheight 25.94cm
+% \pagestyle{empty} % Uncomment if don't want page numbers
+\pagenumbering{gobble}
+\parskip 7.2pt % sets spacing between paragraphs
+%\renewcommand{\baselinestretch}{1.5} % Uncomment for 1.5 spacing between lines
+\parindent 0pt % sets leading space for paragraphs
+% No date in header
+\date{}
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=true,
+linkcolor=blue,
+filecolor=magenta,
+urlcolor=cyan,
+}
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+\newcommand{\ls}{\left\{}
+\newcommand{\rs}{\right\}}
+\newcommand{\lbar}{\left|}
+\newcommand{\rbar}{\right|}
+\newcommand{\ld}{\left.}
+\newcommand{\rd}{\right.}
+\newcommand{\myexists}{\exists \hspace{.3mm}}
+\newcommand{\hs}{\hspace{.75mm}}
+\newcommand{\bs}{\hspace{-.75mm}}
+\newcommand{\nin}{\noindent}
+\newcommand{\fx}{f\bs\left( x \right)}
+\newcommand{\gx}{g\bs\left( x \right)}
+\newcommand{\qx}{q\bs\left( x \right)}
+\newcommand{\nn}{\nonumber}
+\newcommand{\vfive}{\vspace{5mm}}
+\newcommand{\vthree}{\vspace{3mm}}
+\newcommand{\fof}[1]{f\lp #1\rp}
+\newcommand{\gof}[1]{g\lp #1\rp}
+\newcommand{\qof}[1]{q\lp #1\rp}
+\newcommand{\myp}[1]{\left( #1 \right)}
+\newcommand{\myb}[1]{\left[ #1 \right]}
+\newcommand{\mys}[1]{\left\{ #1 \right\}}
+\newcommand{\myab}[1]{\left| #1 \right|}
+\newcommand{\myj}{_j}
+\newcommand{\myjp}{_{j+1}}
+\newcommand{\myjm}{_{j-1}}
+\newcommand{\f}[1]{f\hspace{-1mm}\left( #1 \right)}
+\newcommand{\fp}[1]{f'\hspace{-1mm}\left( #1 \right)}
+\newcommand{\g}[1]{g\hspace{-1mm}\left( #1 \right)}
+\newcommand{\gp}[1]{g'\hspace{-1mm}\left( #1 \right)}
+\newcommand{\q}[1]{q\hspace{-1mm}\left( #1 \right)}
+\newcommand{\qp}[1]{q'\hspace{-1mm}\left( #1 \right)}
+\newcommand{\Px}[1]{P\hspace{-1mm}\left( x_{#1} \right)}
+\newcommand{\Qx}[1]{Q\hspace{-1mm}\left( x_{#1} \right)}
+\newcommand{\tten}[1]{\times 10^{#1}}
+\newcommand{\aij}[1]{a_{#1}}
+\newcommand{\bij}[1]{b_{#1}}
+\newcommand{\rij}[1]{r_{#1}}
+\newcommand{\R}[1]{\mathbb{R}^{#1}}
+\newcommand{\ith}{i^{\textrm{th}}}
+\newcommand{\jth}{i^{\textrm{th}}}
+\newcommand{\kth}{i^{\textrm{th}}}
+\newcommand{\inv}[1]{{#1}^{-1}}
+\newcommand{\bx}{\mathbf{x}}
+\newcommand{\bv}{\mathbf{v}}
+\newcommand{\bw}{\mathbf{w}}
+\newcommand{\by}{\mathbf{y}}
+\newcommand{\bb}{\mathbf{b}}
+\newcommand{\be}{\mathbf{e}}
+\newcommand{\br}{\mathbf{r}}
+\newcommand{\xhat}{\hat{\mathbf{x}}}
+\newcommand{\beq}{\begin{eqnarray}}
+\newcommand{\eeq}{\end{eqnarray}}
+\newcommand{\ben}{\begin{enumerate}}
+\newcommand{\een}{\end{enumerate}}
+\newcommand{\bsq}{\mathsmaller{\blacksquare}}
+\newcommand{\iter}[1]{^{\myp{#1}}}
+% matrix macro
+\newcommand{\mymat}[1]{
+\left[
+\begin{array}{rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr}
+#1
+\end{array}
+\right]
+}
+\newcommand{\smallaug}[1]{
+\left[
+\begin{array}{rr|r}
+#1
+\end{array}
+\right]
+}
+% Actual document starts here
+%
+===================================================================================
+===
+\begin{document}
+\begin{minipage}{0.65\textwidth}
+\nin {\bf CSCI 2824 -- Fall 2023 } \\
+{\bf \underline{Name:} William Writer} 
+previous { } with your name\\
+{\bf \underline{Student ID:} 110442555} 
+with your Student ID
+\end{minipage}\hfill
+\begin{minipage}{0.35\textwidth}
+\hfill {\bf Homework 0}%Replace the 'N' with the appropriate homework number} \\
+\end{minipage}
+% Actual text body starts here
+%
+===================================================================================
+===
+\vfive
+\nin This assignment is $\color{red}{\text{due on Friday, September 1 to Gradescope
+by 6PM}}$. You are expected to write or type up your solutions neatly. Remember
+that you are encouraged to discuss problems with your classmates, but you must work
+and write your solutions on your own.
+{\bf Important}: Make sure to clearly write your full name and your student ID
+number at the top of your assignment. You may {\bf neatly} type your solutions in
+LaTeX for extra credit on the assignment. Make sure that your images/scans are
+clear or you will lose points/possibly be given a 0. Additionally, please be sure
+to $\color{blue}{\text{match the problems from the Gradescope outline}}$ to your
+uploaded images; $\color{red}{\text{no match = no points}}$.\\
+\textbf{\color{red}{Answers alone, correct or not, get no points.}} \
+color{black}You must explain/prove/defend your answer on your homework.\\
+\\
+Note: Homework answers are your explanations to the questions asked. As such, you
+will be graded on your sentence structure, grammar, and spelling, as well as the
+thoroughness of your explanation.\\
+\\
+For example, if the question is "Explain the course policy on LaTeX.",\\
+$\phantom{xx}$then an answer such as "$\color{red}{\text{bonus points}}$", or "$\
+color{red}{\text{+2}}$", or "$\color{red}{\text{student given extra points}}$" are
+all worth zero points, even though they tend to imply the correct answer these
+answers are not actual sentences.\\
+\\
+An appropriate answer that is worth more points might read,\\
+"$\color{blue}{\text{The course policy on LaTeX states that a student will receive
+a bonus of 2-points on their homework}}$\\
+$\color{blue}{\text{ if he/she turns in the assignment on time and it is rendered
+in LaTeX.}}$"\\
+\vspace{5mm}
+\ben
+%==============================================================================
+% problem 1 goes below
+%==============================================================================
+\item (0.2 points) Write a sentence about the calculator policy for this course.\\
+\\
+\if \solutions1
+Ans: \\ You must have a non-graphing scientific calculator
+\fi
+\vspace{10mm}
+\newpage
+%==============================================================================
+% Problem 2 goes below
+%==============================================================================
+\vspace{5mm}
+\item (0.2 points) Describe the repercussions for searching the internet to find
+answers for homework, quiz, and/or exam solutions instead or reading the text and
+creating answers.\\
+\if \solutions1
+\\
+\\
+Ans: 
+\\ Results in the failure of this course
+\fi
+\vspace{10mm}
+\newpage
+%==============================================================================
+% Problem 3 goes below
+%==============================================================================
+\vspace{5mm}
+\item (0.2 points) This course has a 55\% exam average policy. Explain the policy
+and why it is enforced in this class.\\
+\\
+\\
+\if \solutions1
+Ans: \\ This policy is something that forces students to get a cumulative exam score of 55\% or more to pass the class. This is because these larger exams imply retention of the topics that we learned rather than just putting them aside and never using them again. So through doing this, students are able to put a lot more of this information in their long term memory which will make us much more successful in the future. 
+\fi
+\vspace{10mm}
+\newpage
+%==============================================================================
+% Problem 4 goes below
+%==============================================================================
+\vspace{5mm}
+\item (0.2 points) This class grades students by counting how many points they
+receive during the semester. Write a short description concerning how many points
+are offered, how many points the grade is determined out of, and the valid reasons
+a student will be allowed an extension beyond any given deadlines, or allowed a
+retake on an assessment. What is the answer to a student that asks for extra time
+or a re-take because there was a world-wide internet outage, their house caught on
+fire, they had a family hospital emergency, a car accident, they misunderstood the
+due date, and the provost of CU called them to a meeting before they could turn in
+the assessment? Hint: a student never ever ever has to ask for extra time because
+the answer is ALWAYS the same, regardless of circumstances. \\
+\\
+\\
+\if \solutions1
+Ans: \\There  are 1203 total points in the class, however they are only calculated out of 1000. Deadlines for assignments are never extended. Due Dates are when work is accepted for full credit(+2 if early). As for late work, it is accepted but with a penalty. If late, no bonuses will be given and if very late, you will receive minus 2 points. As for the extra time and excuses that students give out, the students do not have to worry about this because the 1203/1000 points acts as a buffer for many missed assignments. So technically the points are given.   
+\fi
+\vspace{10mm}
+\newpage
+%==============================================================================
+% Problem 5 goes below
+%==============================================================================
+\vspace{5mm}
+\item (0.2 points) Propositions are mentioned in chapter 1, section 1 of our text.
+From the list below, pick a single proposition, write it with the word 'cake'
+instead of sandwich. Also, come up with your own proposition about cake and write
+it as well.\\
+List:\\
+"Make me a sandwich."\\
+"Would you like a sandwich?"\\
+"McDonalds makes $x$ types of sandwiches."\\
+"Sandwich is a word that starts with the letter 'R'."\\
+\\
+\\
+\if \solutions1
+Ans: \\ Cake is a word that starts with the letter 'R'. \\ Cake is the number one rated dessert in Indonesia.
+\\
+\fi
+\vspace{10mm}
+\newpage
+%==================================================================================
+======================================
+\een
+\end{document}
